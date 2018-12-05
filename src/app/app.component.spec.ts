@@ -35,4 +35,14 @@ describe('AppComponent', () => {
   it('should render title in a h1 tag', async(() => {
     expect(de.nativeElement.querySelector('h1').textContent).toEqual('Hello World');
   }));
+  it('should render title in a h2 second tag', async(() => {
+    expect(de.nativeElement.querySelector('h2.h2Class').textContent).toEqual('my name is neung');
+  }));
+  // h2.h2Class is hello_world so it's absolutely not equal to hello world
+  it('should render title in a h2 second tag', async(() => {
+    expect(de.nativeElement.querySelector('h2.h2Class').textContent).not.toEqual('hello world');
+  }));
+  it('should render neungInput in input tag', async(() => {
+    expect(de.nativeElement.querySelector('input').value).toBe('my name is neung');
+  }));
 });
