@@ -9,4 +9,8 @@ export class AppComponent {
   title = 'Hello World';
   neungInput = 'my name is neung';
   neungInput2 = 'my name is neung';
+
+  plus(num1, num2) {
+    return num1 + num2;
+  }
 }

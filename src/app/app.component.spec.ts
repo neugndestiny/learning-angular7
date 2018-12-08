@@ -45,4 +45,8 @@ describe('AppComponent', () => {
   it('should render neungInput in input tag', async(() => {
     expect(de.nativeElement.querySelector('input').value).toBe('my name is neung');
   }));
+  it('should plus 2 number', async(() => {
+    const expected: String = 3;
+    expect(app.plus(1, 2)).toEqual(expected);
+  }));
 });
